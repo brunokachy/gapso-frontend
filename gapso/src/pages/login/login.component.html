@@ -1,0 +1,57 @@
+<div class="login login-with-news-feed">
+    <div class="news-feed">
+        <div class="news-image">
+            <img src="assets/img/login-bg/bg-7.jpg" data-id="login-cover-image" alt="" />
+        </div>
+        <div class="news-caption">
+            <h4 class="caption-title">
+                <i class="fa fa-diamond text-success"></i>Gapso</h4>
+            <p>
+                Real Time Gas And Petrol Station Management App
+            </p>
+        </div>
+    </div>
+    <div class="right-content">
+        <div class="login-header">
+            <div class="brand">
+                <span class="logo"></span> Gapso
+                <small>Real Time Gas And Petrol Station Management App</small>
+            </div>
+            <div class="icon">
+                <i class="fa fa-sign-in"></i>
+            </div>
+        </div>
+        <div class="login-content">
+            <alert></alert>
+            <form class="margin-bottom-0">
+                <div class="form-group m-b-15">
+                    <input name="emailAddress" type="email" [(ngModel)]="user.emailAddress" class="form-control" placeholder="Email Address"
+                    />
+                </div>
+                <div class="form-group m-b-15">
+                    <input name="password" type="password" [(ngModel)]="user.password" onkeypress="capLock(event)" class="form-control" placeholder="Password"
+                    />
+                    <span>
+                        <div id="capsLockCheck" class="badge badge-warning badge-square" style="visibility: hidden">Caps Lock is on.</div>
+                    </span>
+                </div>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                <div class="login-buttons">
+                    <button type="submit" (click)="validateLoginEmail()" class="btn btn-primary btn-block btn-lg">Sign me in</button>
+                </div>
+                <div class="m-t-20 m-b-0 p-b-0">
+                    Forgot password?
+                    <a routerLink="/emailcheck" (click)="startChangePassword()" class="text-success" routerLinkActive="active">Click here</a> to reset.
+                </div>
+                <div class="m-t-20 m-b-20 p-b-20">
+                    Not a member yet?
+                    <a routerLink="/register" class="text-success" routerLinkActive="active">Create account</a>.
+                </div>
+                <hr />
+                <p class="text-center text-inverse">
+                    &copy; CarlbTech All Right Reserved 2017
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
